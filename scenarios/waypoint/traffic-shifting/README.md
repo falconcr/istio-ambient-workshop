@@ -79,7 +79,7 @@ kubectl apply -f http-route-80-20.yaml
 You can test traffic distribution by sending multiple requests and observing responses:
 
 ```sh
-kubectl -n woof exec curl-app -- bash -c "for i in {1..10}; do curl -si woof-service/woof; echo; sleep 0.5; done"
+kubectl -n woof exec curl-app -- bash -c "for i in {1..10}; do curl -si woof-service/woof; echo $'\n══════════════════════════════════════════\n'; sleep 0.5; done"
 ```
 
 You should see that approximately **80% of requests** go to `v1` ⚡️ and **20% to `v2`** 🌟.
