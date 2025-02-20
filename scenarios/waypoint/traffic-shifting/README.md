@@ -2,7 +2,7 @@
 
 ## ✅ Prerequisites
 
-Before proceeding with traffic shifting, ensure that the **Woof App** 🐶 has been deployed by following the steps mentioned in [this guide](https://github.com/falconcr/istio-ambient-workshop/tree/main/scenarios/waypoint/woof). It is crucial to have both versions (`v1` and `v2`) of the application running in the `woof` namespace.
+Before proceeding with traffic shifting, ensure that the **Woof App** 🐶 has been deployed by following the steps mentioned in [this guide](https://github.com/falconcr/istio-ambient-workshop/tree/main/scenarios/waypoint/woof-app). It is crucial to have both versions (`v1` and `v2`) of the application running in the `woof` namespace.
 
 ## 📌 Default HTTPRoute Configuration
 
