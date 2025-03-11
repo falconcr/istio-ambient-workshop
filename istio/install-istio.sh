@@ -8,9 +8,13 @@ echo -e "🚀 Installing Kubernetes Gateway... 🔧"
 kubectl get crd gateways.gateway.networking.k8s.io &> /dev/null || \
   { kubectl apply -f https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.2.0/standard-install.yaml; }
 
-
 echo -e "🛠️ Buckle up! We're installing Istio Ambient... 🧙‍♂️ It's like magic, but with YAML and proxies!"
 
 istioctl install --set profile=ambient --skip-confirmation
 
 echo -e "🤩 Istio ambient configured."
+
+# Install kiali, loki & prometheus
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.25/samples/addons/kiali.yaml
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.25/samples/addons/loki.yaml
+kubectl apply -f https://raw.githubusercontent.com/istio/istio/release-1.25/samples/addons/prometheus.yaml
